@@ -3,7 +3,7 @@
   "version": "0.1.9",
   "scripts": {
     "dev": "next dev",
-    "build": "env NODE_ENV=production next build && next export -o docs/",
+    "build": "del docs && env NODE_ENV=production next build && next export -o docs/",
     "start": "next start"
   },
   "dependencies": {
@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.7.6",
+    "del-cli": "^3.0.1",
     "postcss-import": "^12.0.1",
     "tailwindcss": "^1.4.5"
   },
